@@ -1,0 +1,138 @@
+.calcButton {
+  width: 25%;
+  border: 2px gray;
+  background-color: white;
+  color: #073158;
+  padding: 14px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.calcButton:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.editable {
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.editable:hover,
+a.ex1:active {
+  /* background: #F9D9D2; */
+  /* #c2d8ed */
+  /* background:#c2d8ed; */
+  background-color: rgb(0, 181, 184, 0.4);
+}
+
+.sidebar-opened {
+  border: 1px solid #404e67;
+  border-radius: 4px;
+}
+
+.BorderAround {
+  border: 2px solid #404e67;
+  border-radius: 10px;
+  padding-bottom: inherit;
+  background-color: #f3f5f8;
+}
+
+hr {
+  border-top: 1px solid #009c9f;
+}
+
+.btn {
+  width: 95px;
+  margin-right: 10px;
+  border-color: 2px solid grey !important;
+}
+
+.btnStyle {
+  margin-bottom: inherit;
+  width: 60px;
+  /* height: 47px; */
+  text-align: center;
+  /* -webkit-text-decorations-in-effect: overline; */
+  padding: 10px 0px;
+}
+
+.backgroundStyle {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #404e67;
+  padding: 1.5rem 1rem;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+
+.text-color-light {
+  color: white;
+}
+
+#fexp {
+  text-align: -webkit-right;
+  font-size: 20px;
+  padding-bottom: initial;
+}
+
+#fexpForRatio {
+  text-align: -webkit-right;
+  font-size: 20px;
+  padding-bottom: initial;
+}
+
+#actform {
+  text-align: -webkit-right;
+  font-size: 20px;
+  padding-bottom: initial;
+}
+
+#actformForRatio {
+  text-align: -webkit-right;
+  font-size: 20px;
+  padding-bottom: initial;
+}
+
+.btnSide {
+  width: 80px;
+  height: 40px;
+  margin-bottom: 5px;
+  font-size: small;
+  padding: 8px;
+  margin-right: 10px;
+  float: right;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}
+.output {
+  font-size: small;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  right: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  padding: 2rem;
+  background: #fff;
+  color: #db1212;
+  font-size: large;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(1.25rem);
+}

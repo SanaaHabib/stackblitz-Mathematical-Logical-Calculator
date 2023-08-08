@@ -1,0 +1,238 @@
+import { BehaviorSubject, Observable } from 'rxjs';
+
+export default class Operators {
+  operatorList = [
+    {
+      symbol: '-',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '+',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '*',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '/',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '=',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '.',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '%',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '(',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: ')',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '>',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '<',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '!',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: 'or',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: 'and',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '&',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+    {
+      symbol: '|',
+      operator: '(...numbers)',
+      label: '',
+      argument: '~',
+      disabled: false,
+    },
+
+    {
+      symbol: 'avg',
+      operator: 'avg(...numbers)',
+      label: 'Average of  Numbers',
+      argument: 'x',
+      disabled: true,
+    },
+    {
+      symbol: 'min',
+      operator: 'min(...numbers)',
+      label: 'Minimum Number',
+      argument: 'x',
+      disabled: false,
+    },
+    {
+      symbol: 'max',
+      operator: 'max(...numbers)',
+      label: 'Maximum Number',
+      argument: 'x',
+      disabled: false,
+    },
+    {
+      symbol: 'Sqrt',
+      operator: 'sqrt(number)',
+      label: 'Square root of a Number',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'abs',
+      operator: 'abs(number)',
+      label: 'Absolute of a Number',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'ceil',
+      operator: 'ceil(number)',
+      label: 'Rounds a number up to the nearest integer',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'floor',
+      operator: 'floor(number)',
+      label: 'Rounds a number down to the nearest integer.',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'cos',
+      operator: 'cos(number)',
+      label: 'Returns the cosine of a number',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'sin',
+      operator: 'sin(number)',
+      label: 'Returns the sine of a number.',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'exp',
+      operator: 'exp(number)',
+      label:
+        "returns the value of Ex, where E is Euler's number (approximately 2.7183) and x is the number passed to it.",
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'log',
+      operator: 'log(number)',
+      label: 'Returns the natural logarithm (base E) of a number.',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'log10',
+      operator: 'log10(number)',
+      label: 'Returns the base-10 logarithm of a number.',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'log2',
+      operator: 'log2(number)',
+      label: 'Returns the base-2 logarithm of a number.',
+      argument: 1,
+      disabled: false,
+    },
+    {
+      symbol: 'pow',
+      operator: 'pow(number,power)',
+      label: 'Returns the value of number to the power of x (number*x).',
+      argument: 2,
+      disabled: false,
+    },
+
+    {
+      symbol: 'random',
+      operator: 'floor((random() * maxNumber) + minNumber)',
+      label: 'A random whole number between two numbers',
+      argument: 2,
+      disabled: false,
+    },
+    {
+      symbol: 'tan',
+      operator: 'tan(number)',
+      label: 'Returns the tangent of a number.',
+      argument: 1,
+      disabled: false,
+    },
+  ];
+
+  private dataSource: BehaviorSubject<any> = new BehaviorSubject<any>(
+    this.operatorList
+  );
+  data: Observable<any> = this.dataSource.asObservable();
+}

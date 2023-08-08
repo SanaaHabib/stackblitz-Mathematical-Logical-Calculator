@@ -1,0 +1,74 @@
+<div class="tab-content px-1 pt-1 ml-2">
+  <div class="tab-pane active in BorderAround">
+    <div class="backgroundStyle">
+      <dt class="text-uppercase text-center text-color-light">
+        <span> {{ 'B A S I C
+        ' }}</span
+        ><span class="ml-2"> {{ 'C A L C U L A T O R' }}</span>
+      </dt>
+    </div>
+
+    <fieldset class="floating-label-form-group col-md-12">
+      <textarea
+        id="actform"
+        rows="3"
+        class="form-control border-secondary border-lighten-1"
+        [(ngModel)]="expression"
+        placeholder=" {{ 'Input....' }}"
+        [value]="expression"
+      ></textarea>
+      <input
+        id="actform"
+        class="form-control border-secondary border-lighten-1 mt-1"
+        [(ngModel)]="result"
+        placeholder=" {{ 'Output' }}"
+        [value]="result"
+        [disabled]="true"
+      />
+    </fieldset>
+    <br />
+
+    <hr />
+
+    <div class="row">
+      <div class="col-8">
+        <div class="form-group">
+          <button
+            class="btnStyle btn btn-float"
+            (click)="Onoperate(op)"
+            *ngFor="let op of operatorlist"
+            [disabled]="op.disabled"
+          >
+            {{ op.symbol }}
+          </button>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <button
+            class="btnStyle btn btn-float"
+            (click)="OnNumber(num)"
+            *ngFor="let num of numberList"
+          >
+            {{ num }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 float-right">
+        <button class="btnSide btn btn-primary" (click)="sumup()">=</button>
+        <button class="btnSide btn btn-secondary" (click)="BackSpace()">
+          Backspace
+        </button>
+        <button class="btnSide btn btn-danger" (click)="Clear()">
+          Clear All
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alert" [class.visible]="isVisible">
+  Empty or Wrong Formula Expression!
+</div>
